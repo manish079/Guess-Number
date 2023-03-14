@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* html {
+  font-size: 62.5%;
+} */
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #242423;
+  font-family: "Roboto Slab", serif;
+}
+.title {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  text-align: center;
+  z-index: 3;
+  width: 250px;
+  height: 50px;
+  background-color: #333533;
+  border-radius: 50px;
+  font-size: 24px;
+  color: #cfdbd5;
+}
+.title p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.title::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 10px;
+  width: 250px;
+  height: 50px;
+  background-color: #f5f2f348;
+  border-radius: 50px;
+  font-synthesis: 24px;
+}
+
+.main-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+/*circles */
+.all-circle {
+  position: relative;
+  display: flex;
+  width: 50%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* outer-circle */
+.back-circle {
+  position: absolute;
+  z-index: 1;
+  height: 480px;
+  width: 480px;
+  border-radius: 50%;
+  background-color: #cfdbd5;
+  border: 4px solid #e8eddf;
+}
+
+.inner-circle {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 100px;
+  background-color: #f5cb5c;
+  height: 370px;
+  width: 370px;
+  border-radius: 50%;
+  border: 2px solid #e8eddf;
+  transition: left 0.6s ease-in-out;
+}
+
+.font-circle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+  background-color: #cfdbd5;
+  border-radius: 50%;
+  height: 450px;
+  width: 450px;
+}
+.gif-img {
+  position: absolute;
+  top: 179px;
+}
+
+.font-c-text {
+  position: relative;
+  bottom: 50px;
+  text-align: center;
+  font-size: 30px;
+}
+.guess-number {
+  font-size: 80px;
+}
+
+.lock-div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  right: 20px;
+}
+
+.inner-circle-small-circle {
+  height: 12px;
+  width: 12px;
+  background-color: #242423;
+  border-radius: 50px;
+}
+
+.small-circle1 {
+  transition: all 0.1s ease-in-out;
+  animation: blink 1.1s ease-in-out infinite;
+}
+
+.small-circle2 {
+  transition: all 0.1s ease-in-out;
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0% {
+    height: 12px;
+    width: 12px;
+  }
+  50% {
+    height: 6px;
+    width: 6px;
+  }
+}
+.lock-close {
+  display: flex;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+/* right side part */
+.hidden {
+  display: none;
+}
+.right-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 30px;
+  width: 50%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.square {
+  display: flex;
+  width: 350px;
+  height: 250px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5cb5c;
+  border-radius: 20px;
+  box-shadow: #e8eddf 15px 19px, #e8eddf 15px 15px;
+}
+
+.square1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+}
+.range {
+  position: relative;
+  text-align: center;
+  top: 20px;
+  height: 50px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: #e8eddf;
+  outline: none;
+  border: none;
+  font-size: 30px;
+}
+.range:focus {
+  border: 2px solid #333533;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.rangeValue {
+  text-align: center;
+  font-size: 40px;
+  color: #242423;
+}
+.start {
+  position: absolute;
+  font-size: 30px;
+  padding: 5px 25px;
+  border-radius: 50px;
+  background-color: #333533;
+  color: #e8eddf;
+  border: none;
+  left: 20px;
+  bottom: 30px;
+  outline: 2px solid #333533;
+  outline-offset: 1px;
+  transition: outline-offset 0.2s ease-in-out;
+  cursor: pointer;
+}
+.square1-text {
+  position: relative;
+  top: 15px;
+  text-align: center;
+  font-size: 50px;
+  color: #333533;
+}
+.square2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-direction: column;
+}
+.square2-text {
+  position: absolute;
+  font-size: 34px;
+  color: #333533;
+  top: 20px;
+  left: 20px;
+}
+.input-value {
+  position: absolute;
+  left: 20px;
+  text-align: center;
+  font-size: 30px;
+  outline: none;
+  width: 250px;
+  height: 60px;
+  background-color: #e8eddf;
+  border: none;
+  border-radius: 10px;
+}
+.input-value :focus {
+  border: 2px solid #333533;
+}
+.sub-btn {
+  position: absolute;
+  font-size: 30px;
+  padding: 5px 25px;
+  border-radius: 50px;
+  background-color: #333533;
+  color: #e8eddf;
+  border: none;
+  left: 20px;
+  bottom: 20px;
+  outline: 2px solid #333533;
+  outline-offset: 1px;
+  transition: outline-offset 0.2s ease-in-out;
+}
+.sub-btn:hover,
+.start:hover {
+  outline-offset: 4px;
+}
+
+/* winning  */
+.text-content-holder {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100vh;
+}
+.text-content-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.game-over-square {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  top: 10px;
+  height: 200px;
+  width: 350px;
+  background-color: #f5cb5c;
+  border-radius: 20px;
+  box-shadow: #e8eddf 15px 19px, #e8eddf 15px 15px;
+}
+.game-over-restart-square {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  top: 10px;
+  height: 200px;
+  width: 350px;
+  background-color: #f5cb5c;
+  border-radius: 20px;
+  box-shadow: #e8eddf 15px 19px, #e8eddf 15px 15px;
+}
+.game-over-inner-content {
+  position: relative;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.icon1,
+.icon2,
+.icon3 {
+  font-size: 40px;
+  color: #333533;
+}
+.rank {
+  font-size: 60px;
+}
+.attempt {
+  font-size: 80px;
+}
